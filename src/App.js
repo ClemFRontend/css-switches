@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Switch1 from './components/Switch1/Switch1';
+import ThemeSwitcher from './components/ThemeSwitcher/ThemeSwitcher';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Switches</h1>
+      <div>
+        <p>Theme switch</p>
+        <ThemeSwitcher />
+      </div>
+      <div>
+        <p>Switch1</p>
+        <Switch1 
+          name='theme'
+          handleChange={() => {}} />
+      </div>
     </div>
   );
 }
